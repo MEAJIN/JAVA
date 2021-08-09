@@ -1,0 +1,35 @@
+import java.util.Scanner; // 스캐너를 사용하기 위해 import 호출
+
+public class five { //five 라는 클래스 생성
+
+	public static void main(String[] args) { // 메인 메소드 실행
+		// TODO Auto-generated method stub
+String a;
+String b;
+String c;
+String d;
+String e;   // 문자형 변수 a, b, c, d, e 선언
+
+Scanner s = new Scanner(System.in); // 스캐너로부터 값을 입력 받기 위해 스캐너 함수 생성
+
+System.out.print("경기장은 어디입니까?"); //출력
+a = s.next(); // 입력받은 값은 문자형으로 a에 대입
+System.out.print("이긴팀은 어디입니까?"); //출력
+b = s.next(); // 입력받은 값은 문자형으로 b에 대입
+System.out.print("진팀은 어디입니까?"); //출력
+c = s.next(); // 입력받은 값은 문자형으로 c에 대입
+System.out.print("우수선수는 누구입니까?"); //출력
+d= s.next(); // 입력받은 값은 문자형으로 d에 대입
+System.out.print("스코어는 몇대몇 입니까?"); //출력
+e= s.next(); // 입력받은 값은 문자형으로 e에 대입 
+
+System.out.println("=============================================");
+System.out.println("오늘 "+a+" 에서 야구 경기가 열렸습니다.");
+System.out.println(b+" 와"+c+"은 치열한 공방전을 펼쳤습니다.");
+System.out.println(d+"이 맹활약을 하였습니다.");
+System.out.println("결국 "+b+" 가 "+c+"를 "+e+" 로 이겼습니다.");
+System.out.println("=============================================");
+
+	}
+
+}

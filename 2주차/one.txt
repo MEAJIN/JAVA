@@ -1,0 +1,57 @@
+import java.util.Scanner; // 스캐너를 사용하기 위해 import 호출
+
+public class one { // one이라는 클래스 생성
+
+	public static void main(String[] args) { // 메인 메소드 실행
+		
+		int a,b,c; // 4바이트 정수형 변수 a,b,c 선언
+
+
+		Scanner s =new Scanner(System.in); // 키보드로부터 입력받기 위해 스캐너 선언
+		
+      		System.out.print("정수를 입력하시오.:"); // "정수를 입력하시오" 출력
+      		a = s.nextInt(); // 문자형으로 값을 입력받은 후 a에 대입
+
+      		System.out.print("정수를 입력하시오.:"); // "정수를 입력하시오" 출력
+    		b = s.nextInt(); // 문자형으로 값을 입력받은 후 b에 대입
+
+    		System.out.print("정수를 입력하시오.:"); // "정수를 입력하시오" 출력
+		c = s.nextInt(); // 문자형으로 값을 입력받은 후 c에 대입
+
+	
+	if (a>b && a>c) { // 만약 a가 b보다 크거나 c보다 크고
+
+		if(b>c) { // b가 c보다 크면
+
+			System.out.println("정렬된 숫자:"+c+","+b+","+a); // 크기순으로 정렬 되어 출력
+		}
+  
+		
+			System.out.println("정렬된 숫자:"+b+","+c+","+a);  // 그렇지 않다면 크기순으로 정렬 되어 출력
+		}
+	}
+
+	else if (b>a && b>c) { //그렇지 않고 만약 b가 a보다 크고 c보다 클때
+
+		if(a>c) { a가 c보다 크면
+			System.out.println("정렬된 숫자:"+c+","+a+","+b); // 크기순으로 정렬 후 출력
+		}
+
+		else {
+			System.out.println("정렬된 숫자:"+a+","+c+","+b); // 그렇지 안다면 크기순으로 출력
+		}
+	}
+
+	else if(c>b && c>a) { //그렇지 않고 만약 c가 b보다 크고 &&  c가 a보다 크고
+ 
+		if(b>a) { //b가 a보다 클때
+			System.out.println("정렬된 숫자:"+a+","+b+","+c);  // 크기순으로 출력
+		}
+
+		else {
+			System.out.println("정렬된 숫자:"+b+","+a+","+c);  // 크기순으로 출력
+		}
+	}
+    
+}
+}

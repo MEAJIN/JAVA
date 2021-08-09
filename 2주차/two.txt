@@ -1,0 +1,39 @@
+import java.util.Scanner; // 스캐너를 사용하기 위해 import 호출
+
+
+public class two { // two라는 클래스 생성
+
+	public static void main(String[] args) { // 메인 메소드 실행
+		// TODO Auto-generated method stub
+
+		Scanner s = new Scanner(System.in); // 스캐너로부터 값을 입력 받기 위해 스캐너 함수 생성
+
+		int a;  // 4바이트 정수형 a변수 생성  // 투입한 돈
+		int b;  // 4바이트 정수형 b변수 생성  // 물건 값
+		int c;  // 4바이트 정수형 c변수 생성  // 거스름돈
+		int d;  // 4바이트 정수형 d변수 생성  // 500원 동전 개수
+		int e;  // 4바이트 정수형 e변수 생성  // 거스름돈에서 500원 동전 개수를 나누어 나머지가 0인 값
+		int f;  // 4바이트 정수형 f변수 생성  // 100원 동전 개수
+
+
+		System.out.print("투입한 돈 :");  // 투입한 돈 입력창 출력
+		a = s.nextInt(); // 정수형으로 값 입력 받은 후 a에 대입
+
+		System.out.print("물건 값:"); //  물건 값 입력창출력
+		b = s.nextInt(); // 정수형으로 값 입력 받은 후 b에 대입
+
+		c=a-b; // a에서 b를 뺀 후 c에 대입
+		System.out.println("거스름 돈:"+e); // 거스름돈 출력
+
+		d=c/500; // c에서 500을 나눠 나온 몫을 d에 대입
+		System.out.println("500원 동전의 개수:"+r1); // 500원 개수 출력
+
+		e=c%500; // c에서 500을 나눠 나온 나머지를 e에 대입 (이는 남은 잔돈의 수==100원짜리)
+
+		f=e/100; // e에서 100을 나눠 나온 몫을 f에 대입
+		System.out.println("100원 동전의 개수:"+r3); // 100원 개수 출력
+
+
+	}
+
+}

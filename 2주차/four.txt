@@ -1,0 +1,35 @@
+import java.util.Scanner; //스캐너를 사용하기 위해 import 호출
+
+public class four { // four이라는 클래스 생성
+
+	public static void main(String[] args) { // 메인메소드 실행
+		// TODO Auto-generated method stub
+
+		Scanner s= new Scanner(System.in); // 키보드로부터 입력받기 위해 스캐너 선언
+
+		int a; // 4바이트 정수형 변수 a선언
+		int b=0; // 4바이트 정수형 변수 b선언 하고 값을 0으로 줌
+		int c=0; // 4바이트 정수형 변수 c선언 하고 값을 0으로 줌
+		int d; // 4바이트 정수형 변수 d선언
+
+		System.out.println("출력할 항의 개수:"); // 출력
+	
+		a = s.nextInt(); // 정수형으로 값을 입력받아 a에 대입
+
+		for(int i=1;i<=a;i++) { // i에 1값을 주고 a와 값이 같거나 작을때 까지 1씩 증가
+
+		d=c; // b에 c값 대입
+
+		c=b; // c에 b값 대입
+
+		b=c+d; // b에 c+d값 대입
+   		
+		 ++a; // a값 1씩 증가 ( 반복문 조건이 만족할 때 까지)
+
+	System.out.print(d+" "); // 출력
+	
+		}
+	
+	}
+
+}

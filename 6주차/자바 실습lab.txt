@@ -1,0 +1,122 @@
+1번 프로그램
+import java.awt.Graphics;
+import javax.swing.*;
+import java.util.Random;
+
+class Vehicle extends JFrame{
+	public Vehicle() {
+		super();
+		setSize(100,100);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	@Override
+	public void paint(Graphics g) {
+		super.paint(g);
+		g.drawArc(90, 60, 20, 20, 0, 360);
+		g.drawArc(30, 60, 20, 20, 0, 360);
+	}
+}
+class Bus extends Vehicle{
+	@Override
+	public void paint(Graphics g) {
+		super.paint(g);
+		setLocation(0, 0);
+		g.drawRect(20, 20, 100, 50);
+
+	}
+}
+class Car extends Vehicle{
+	@Override
+	public void paint(Graphics g) {
+		super.paint(g);
+		setLocation(0, 100);
+		g.drawRect(20, 20, 100, 50);
+		g.drawRect(75, 20, 40, 30);
+	}
+}
+class Truck extends Vehicle{
+	@Override
+	public void paint(Graphics g) {
+		super.paint(g);
+		setLocation(0, 200);
+		g.drawRect(20, 50, 60, 20);   //트럭 짐 칸
+		g.drawRect(80, 20, 40, 50);  //운전석
+	}
+}
+
+public class Test {
+	public static void main(String[] args) {
+		Vehicle v[]= new Vehicle[3];
+		v[0] = new Bus();
+		v[1] = new Car();
+		v[2] = new Truck();
+		Random r = new Random();
+		int a=0,b=0,c=0;
+		
+		for(int j = 0; j<100; j++) {
+			a += r.nextInt(10);
+			b += r.nextInt(10);
+			c += r.nextInt(10);
+			v[0].setLocation(a,0);
+			v[1].setLocation(b,100);
+			v[2].setLocation(c,200);
+		}
+		if((a>b)&&(a>c))
+			System.out.println("버스가 우승했습니다.");
+		else if((b>a)&&(b>c))
+			System.out.println("차가 우승했습니다.");
+		else
+			System.out.println("트럭이 우승했습니다.");
+	}
+}
+2번
+import java.awt.Graphics;
+import javax.swing.*;
+import java.util.Random;
+import java.util.Scanner;
+
+abstract class Sprite {
+	int x=3, y=3;
+	abstract void move(char c);
+}
+
+class Main extends Sprite{
+	void move(char c) {
+		if(c == 'a') --x;
+		else if(c == 's') --y;
+		else if(c =='w') ++y;
+		else if(c == 'd') ++x;
+	}
+}
+class Monster extends Sprite {
+	public Monster() {
+		x = y = 7;
+	}
+	void move(char c) {
+		x += (Math.random()-0.5)>0? 1:-1;
+		y += (Math.random()-0.5)>0? 1:-1;
+	}
+}
+
+//class Map {
+//for(int i = 0; i < 20; i++) {
+//for(int j = 0; j < 20; j++) {
+//if(i == 0 || i == 19) {
+//System.out.println('#');
+//} else if(j == 0 || j == 19) {
+//System.out.println('#');
+//}
+//}
+//System.out.println("왼쪽(a), 오른쪽(d), 아래(s), 위(w)");
+//}
+//}
+
+public class Test {
+	public static void main(String[] args) {
+		Main User = new Main();
+		Monster M = new Monster();
+		Scanner sc = new Scanner(System.in);
+		
+	}
+}
